@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-family: "Poppins", sans-serif;
+    overflow-y: scroll;        /* permite scroll */
+    overflow-x: hidden;        /* oprește scroll pe orizontală */
+    scrollbar-width: none;     /* ascunde pe Firefox */
+}
+
+
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding-top: 9vh;
+    padding-bottom: 150px;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #ff2b2b;
+    margin-bottom: 50px;
+    text-shadow: 0 0 30px #ff0000aa;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: 60px;
+}
+
+.card {
+    width: 270px;
+    background: rgba(10, 10, 10, 0.6);
+    border: 2px solid rgba(255,50,50,0.35);
+    border-radius: 16px;
+    padding: 22px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px #ff000025;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px #ff00004d;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* FUTURISTIC BUTTON */
+.btn.futuristic {
+    display: block;
+    padding: 10px 18px; /* mai mic */
+    font-size: 16px;    /* mai mic */
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(90deg,#ff1d1d,#ff3c00,#ff1d1d);
+    border-radius: 10px; /* mai mic */
+    text-decoration: none;
+    box-shadow: 0 0 15px #ff000050;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    overflow: hidden;
+}
+
+.btn.futuristic:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 30px #ff0000aa;
+}
+
+
+.btn.futuristic::before {
+    content:"";
+    position:absolute;
+    top:0; left:-100%;
+    width:100%; height:100%;
+    background:rgba(255,255,255,0.25);
+    transform:skewX(-20deg);
+    transition:0.6s;
+}
+
+.btn.futuristic:hover::before {
+    left:120%;
+}
+
+/* ABOUT */
+.about {
+    width: 65%;
+    margin: auto;
+    text-align: left;
+    background: rgba(10, 10, 10, 0.6);
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid rgba(255,50,50,0.25);
+    box-shadow: 0 0 30px #ff000025;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ff2b2b;
+    margin-bottom: 18px;
+}
+
+.about ul {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding-left: 22px;
+}
+
+.about ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #eee;
+}
+
+::-webkit-scrollbar {
+    display: none; /* ascunde bara */
+}
